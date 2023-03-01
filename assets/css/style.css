@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.6)),url(../img/bgHero2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: top;
+    background-position-x: right;
+}

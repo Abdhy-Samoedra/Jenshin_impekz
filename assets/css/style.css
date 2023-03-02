@@ -8,9 +8,85 @@
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.6) ,rgba(0,0,0,0.6)),url(../img/bgHero2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 50%), url(../img/bgHero2.jpg);
     background-size: cover;
     background-position: center;
     background-position-y: top;
     background-position-x: right;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-left: 112px;
+    padding-right: 112px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 16px 24px;
+}
+
+nav ul li a {
+    color: #A3ABB3;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5);
+    transition: .3s;
+}
+
+.btnLogin {
+    border: none;
+    background: #3C834C;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    transition: .4s;
+}
+
+.btnLogin:hover {
+    box-shadow: 86px 46px 39px rgba(0, 0, 0, 0.03), 48px 26px 33px rgba(0, 0, 0, 0.1), 21px 12px 24px rgba(0, 0, 0, 0.17), 5px 3px 13px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: #52A966;
+}
+
+.heroLogo {
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translate(-50%);
+    filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.8));
+}
+
+.poster .btnDonwload {
+    list-style-type: none;
+    position: absolute;
+    text-decoration: none;
+    top: 570px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    gap: 32px;
+    
+}
+.poster .btnDonwload :hover{
+    transition: .3s;
+    transform: scale(1.1);
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.2));
 }

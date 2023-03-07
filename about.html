@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/about.css">
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 </head>
 
 <body>
@@ -17,18 +18,115 @@
         <nav>
             <img class="logo" src="./assets/img/navLogo.svg" alt="">
             <ul class="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">Characthers</a></li>
                 <li><a href="#">Maps</a></li>
                 <li><a href="#">About</a></li>
             </ul>
             <ul>
                 <li><a href="#">Signup</a></li>
-                <button class="btnLogin" type="button">Login</button>
+                <button class="btnLogin" type="button"><a href="login.html"></a>Login</button>
             </ul>
         </nav>
-
+            <h2 class="header-text">An Open-world Action RPG Game</h2>
+            <p class="header-desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                enim velit mollit. Exercitation veniam consequat </p>
     </div>
+
+    <div class="fiturGame">
+        <h2 class="fiturGameTitle">Fitur Game</h2>
+    </div>
+
+    <section class="fitur-01">
+       <div class="content">
+        <div class="image">
+            <img src="./assets/img/fitur1.png" alt="">
+        </div>
+        <div class="text-box">
+            <h3>Fantasy Adventure</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestias sapiente saepe magni assumenda natus eveniet maxime hic aut commodi asperiores maiores, laudantium inventore, alias aperiam iste, velit fugit! Esse?
+            </p>
+        </div>
+       </div>
+    </section>
+
+    <section class="fitur-02">
+    <div class="content2">
+        <div class="image2">
+            <img src="./assets/img/fitur2.png" alt="">
+        </div>
+        <div class="text-box2">
+            <h3>Explore Your World</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestias sapiente saepe magni assumenda natus eveniet maxime hic aut commodi asperiores maiores, laudantium inventore, alias aperiam iste, velit fugit! Esse?
+            </p>
+        </div>
+       </div>
+    </section>
+
+    <section class="fitur-03">
+        <div class="content3">
+            <div class="image3">
+                <img src="./assets/img/fitur03.png" alt="">
+            </div>
+            <div class="text-box3">
+                <h3>Make Your Party</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestias sapiente saepe magni assumenda natus eveniet maxime hic aut commodi asperiores maiores, laudantium inventore, alias aperiam iste, velit fugit! Esse?
+                </p>
+            </div>
+           </div>
+        </section>
+
+        <div class="button">
+            <ul class="btn">
+                <button class="btnChar" type="button">See Galery</button>
+                <button class="btnWeapon" type="button">See Galery</button>
+            </ul>
+        </div>
+
+        <div class="map">
+            <h2 class="jenshin-World">Jenshin World</h2>
+            <p class="world-Desc">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                enim velit mollit. Exercitation veniam consequat </p>                
+        </div>
+
+        <section class="container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                   <img id="slide-1" src="./assets/img/Map.png" alt="3D rendering" />
+                   <img id="slide-1" src="./assets/img/map-2.png" alt="3D rendering" />
+                   <img id="slide-1" src="./assets/img/map-3.png" alt="3D rendering" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <script>
+            ScrollReveal({
+                reset: true,
+                distance: '60px',
+                duration: 2500,
+                delay: 400
+            })
+
+            ScrollReveal().reveal('.fiturGameTitle' , {delay: 300, origin: 'left'});
+            ScrollReveal().reveal('.fitur-01 .image , .fitur-02 .image2 , .fitur-03 .image3' , {delay: 400, origin: 'bottom'});
+            ScrollReveal().reveal('.text-box,.text-box2 , .text-box3' , {delay: 500, origin: 'right'});   
+            ScrollReveal().reveal('.btnChar , .btnWeapon' , {delay: 600 , origin: 'bottom'})
+            ScrollReveal().reveal('.jenshin-World , .world-Desc' , {delay: 600 , origin: 'bottom'})
+            ScrollReveal().reveal('.header-text , .header-desc' , {delay: 400, origin: 'bottom'})
+        </script> -->
+
+   
+       
+
 </body>
 
 </html>

@@ -1,8 +1,18 @@
-* {
+@font-face {
+    font-family: 'Space Grotesk', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+}
+@font-face {
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HYWenHei 85W'), url('./assets/font/zhcn.woff') format('woff');
+}
+
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Space Grotesk', sans-serif;
 }
 
 .headerAbout {
@@ -13,21 +23,27 @@
     background-position: center;
     background-position-y: top;
     background-position-x: right;
+    font-family: 'Space Grotesk';
+}
+
+body {
+    background:linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
+    background-attachment: fixed;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 32px;
-    padding-left: 112px;
-    padding-right: 112px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 nav ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 16px 24px;
+    padding: 1rem 1.5rem;
 }
 
 nav ul li a {
@@ -35,8 +51,8 @@ nav ul li a {
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 nav ul li a:hover {
@@ -48,11 +64,11 @@ nav ul li a:hover {
 .btnLogin {
     border: none;
     background: #3C834C;
-    padding: 8px 24px;
-    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
     color: white;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.2rem;
     line-height: 135%;
     transition: .4s;
 }
@@ -71,22 +87,411 @@ nav ul li a:hover {
     filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.8));
 }
 
-.poster .btnDonwload {
-    list-style-type: none;
-    position: absolute;
-    text-decoration: none;
-    top: 570px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-    gap: 32px;
-    
-}
+
 .poster .btnDonwload :hover{
     transition: .3s;
     transform: scale(1.1);
     cursor: pointer;
     filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.2));
 }
+
+.header-text {
+    position: absolute;
+    width: 526px;
+    height: 136px;
+    left: 457px;
+    top: 312px;
+        
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+        
+    color: #FFFFFF;
+        
+    text-shadow: 0px 0px 232px rgba(255, 255, 255, 0.35),
+    0px 0px 135.87px rgba(255, 255, 255, 0.265741),
+    0px 0px 73.8963px rgba(255, 255, 255, 0.212593),
+    0px 0px 37.7px rgba(255, 255, 255, 0.175), 
+    0px 0px 18.9037px rgba(255, 255, 255, 0.137407),
+    0px 0px 9.12963px rgba(255, 255, 255, 0.0842593);
+}
+
+.header-desc{
+position: absolute;
+width: 912px;
+height: 62px;
+left: 264px;
+top: 480px;
+
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 31px;
+text-align: center;
+letter-spacing: 0.04em;
+
+color: #FFFFFF;
+
+text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
+0px 33.0556px 66.1782px rgba(255, 255, 255, 0.311296),
+0px 19.6444px 35.9926px rgba(255, 255, 255, 0.249037),
+0px 10.2px 18.3625px rgba(255, 255, 255, 0.205),
+0px 4.15556px 9.20741px rgba(255, 255, 255, 0.160963),
+0px 0.944444px 4.44676px rgba(255, 255, 255, 0.0987037);
+}
+
+.fiturGameTitle {
+    position: absolute;
+    height: 49px;
+    left: 521px;
+    top: 880px;
+    font-family: 'HYWenHei 85W';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}
+
+/* Fitur Game 01 */
+.fitur-01{
+    top: 100px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 80px 100px;
+    color: black;
+}
+
+.content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+ } 
+
+.content .image{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content .image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box{
+    z-index: 222;
+    background: #67717D;
+    border: 32px solid #102133;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 400px;
+    transform: translate(-80px , 50px);
+    position: absolute;
+    width: 402vw;
+    height: 316px;
+    right: -100px;
+    top: 90px;
+    padding-top: 24px;
+}
+.content .text-box h3{
+    font-size: 25;
+    margin-bottom: 10px;
+    font-family: 'HYWenHei 85W';
+    background: #67717D;
+    border-radius: 20px;
+
+}
+.content .text-box p{
+    font-family: 'Space Grotesk';
+
+}
+
+/* Fitur Game 02 */
+
+.fitur-02{
+    top: 80px;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 80px 100px;
+    color: black;
+}
+
+.content2{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+ } 
+
+.content2 .image2{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content2 .image2 img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content2 .text-box2{
+    z-index: 222;
+    background: #67717D;
+    border: 32px solid #102133 ;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 400px;
+    transform: translate(-80px , 50px);
+    position: absolute;
+    width: 402vw;
+    height: 316px;
+    left: 100px;
+    top: 90px;
+    padding-top: 24px;
+}
+.content2  .text-box2 h3{
+    font-size: 25;
+    margin-bottom: 10px;
+    font-family: 'HYWenHei 85W';
+    background: #67717D;
+    border-radius: 20px;
+
+}
+
+.content2 .text-box2 p{
+    font-family: 'Space Grotesk';
+}
+
+/* Fitur Game 03 */
+
+.fitur-03{
+    top: 80px;
+    background-color: transparent;  
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 80px 100px;
+    color: black;
+}
+
+.content3{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+ } 
+
+.content3 .image3{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content3 .image3 img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content3 .text-box3{
+    z-index: 222;
+    background: #67717D;
+    border: 32px solid #102133 ;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 400px;
+    transform: translate(-80px , 50px);
+    position: absolute;
+    width: 402vw;
+    height: 316px;
+    right: -100px;
+    top: 90px;
+    padding-top: 24px;
+}
+.content3  .text-box3 h3{
+    font-size: 25;
+    margin-bottom: 10px;
+    font-family: 'HYWenHei 85W';
+}
+
+.content3 .text-box3 p{
+    font-family: 'Space Grotesk';
+}
+
+/* button */
+
+.btnChar {
+    background: #F4EFE1;
+    border: 8px solid #E4D9C9;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: black;
+    font-family: 'HYWenHei 85W';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    transition: .4s;
+}
+
+.btnWeapon {
+    background: #F4EFE1;
+    border: 8px solid #E4D9C9;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: black;
+    font-family: 'HYWenHei 85W';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    transition: .4s;
+}
+
+.button .btn {
+    list-style-type: none;
+    position: absolute;
+    text-decoration: none;
+    top: 2550px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    gap: 32px;
+
+}
+
+/* Jensin world */
+
+.jenshin-World {
+    position: absolute;
+    height: 49px;
+    left: 521px;
+    top: 2750px;
+    font-family: 'HYWenHei 85W';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+}
+
+.world-Desc{
+    position: absolute;
+    width: 684px;
+    height: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2800px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;;    
+    letter-spacing: 0.04em;
+
+    color: #A3ABB3;
+}
+
+/* slider */
+
+.container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    position: absolute;
+    max-width: 48rem;
+    margin: 0 auto;
+    top: 2900px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+
+}
+
+
+
+

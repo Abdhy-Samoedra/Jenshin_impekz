@@ -141,6 +141,20 @@ nav ul li a:hover {
     transform: translateY(-50%);
 }
 
+.input-box.succes input{
+    border-color: #09c372;
+}
+
+.input-box.error input{
+    border-color: #ff3860;
+}
+
+.input-box.error{
+    color: #ff3860;
+    font-size: 9px;
+    font-family: 'Space Grotesk';
+}
+
 .btn {
     display: flex;
     flex-direction: row;

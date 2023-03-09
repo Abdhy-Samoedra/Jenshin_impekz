@@ -1,11 +1,14 @@
 const form =document.getElementById('form');
 const username = document.getElementById('username');
+const email = document.getElementById('email');
 const password = document.getElementById('password');
+const age = document.getElementById('age');
 let check = 0;
 
 
 form.addEventListener('submit' , e =>{
     e.preventDefault();
+
     validateInputs();
 });
 
@@ -32,12 +35,22 @@ const setSucces = element => {
 
 const validateInputs = () => {
     const usernameValue =username.value.trim();
+    const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
+    const ageValue = age.value.trim();
 
     if(usernameValue === ''){
         setError(username , 'Username is required');
     }else{
         setSucces(username);
+    }
+
+    if(emailValue === ''){
+        setError(email, "Email is Required");
+    }else if(!emailValue.includes("@gmail.com")){
+        setError(email,"Email must be @gmail.com");
+    }else{
+        setSucces(email);
     }
 
     if(passwordValue ===''){
@@ -48,8 +61,17 @@ const validateInputs = () => {
         setSucces(password)
     }
 
+    if(ageValue ===''){
+        setError(age , 'Age is Required');
+    }else if(ageValue < 17){
+        setError(age , 'You are still underage');
+    }
+    else{
+        setSucces(age);
+    }
+
     if(check == 0){
-        alert("Login Success")
+        alert("Registrasion Success")
     }
 
 

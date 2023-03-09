@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Register Jenshin Impekz</title>
     <link  rel="stylesheet" href="./assets/css/register.css">
+    <script defer src="./assets/js/register.js"></script>
 </head>
 
 <body>
@@ -35,25 +36,29 @@
     <div class="wrapper">
         <div class="form-box">
             <h2>Sign Up</h2>
-            <form action="#">
+            <form id ="form" action="/">
                 <div class="input-box">
                     <img src="./assets/img/user-login.svg" alt="">
-                    <input type="text" placeholder="Username" required>
+                    <input id = "username" input type="text" placeholder="Username">
+                    <div class="error"></div>
                 </div>
 
                 <div class="input-box">
                     <img src="./assets/img/mailRegis.svg" alt="">
-                    <input type="email" placeholder="Email" required>
+                    <input id ="email" input type="email" placeholder="Email">
+                    <div class="error"></div>
                 </div>
 
                 <div class="input-box">
                 <img src="./assets/img/pass-login.svg" alt="">
-                    <input type="password" placeholder="Password"  required>
+                    <input id="password" input type="password" placeholder="Password" >
+                    <div class="error"></div>
                 </div>
 
                 <div class="input-box">
                     <img src="./assets/img/ageRegis.svg" alt="">
-                    <input type="number" placeholder="Age" required>
+                    <input id ="age" input type="number" placeholder="Age">
+                    <div class="error"></div>
                 </div>
 
                 <div class="checkbox-text">

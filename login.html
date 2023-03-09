@@ -35,14 +35,16 @@
     <div class="wrapper">
         <div class="form-box login">
             <h2>Sign In</h2>
-            <form action="#">
+            <form id  = "form" action="/">
                 <div class="input-box">
                     <img src="./assets/img/user-login.svg" alt="">
-                    <input type="username" placeholder="Username" required>
+                    <input id = "username" input type="text" placeholder="Username">
+                    <div class="error"></div>
                 </div>
                 <div class="input-box">
-                <img src="./assets/img/pass-login.svg" alt="">
-                    <input type="password" placeholder="Password"  required>
+                    <img src="./assets/img/pass-login.svg" alt="">
+                    <input id = "password" input type="password" placeholder="Password">
+                    <div class="error"></div>
                 </div>
                 <button type="submit" class="btn" ><img src="./assets/img/arrow_login.svg" alt=""></button>
                 <div class="login-register">

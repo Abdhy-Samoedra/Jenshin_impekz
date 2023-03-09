@@ -19,6 +19,7 @@
 body {
     background: linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .header {
@@ -27,6 +28,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 50%), url(../img/bgHero2.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;;
 }
 
 nav {
@@ -220,8 +222,8 @@ nav .fa {
 
 @media(max-width: 576px) {
     nav {
-        margin-left: 56px;
-        margin-right: 56px;
+        margin-left: 48px;
+        margin-right: 48px;
     }
 
     .nav-links ul li {
@@ -274,7 +276,7 @@ nav .fa {
     }
 
     .CTA .heroLogo {
-        width: 320px;
+        width: 280px;
     }
 
     .CTA .btnDonwload {
@@ -445,8 +447,8 @@ nav .fa {
 
 @media screen and (max-width: 576px) {
     .newCharacthers {
-        padding-right: 56px;
-        padding-left: 56px;
+        padding-right: 48px;
+        padding-left: 48px;
     }
 
     .newCharacthers .text h1 {
@@ -633,8 +635,8 @@ nav .fa {
 
 @media screen and (max-width: 576px) {
     .newWeapon {
-        padding-right: 56px;
-        padding-left: 56px;
+        padding-right: 48px;
+        padding-left: 48px;
     }
 
     .newWeapon .text h1 {
@@ -746,4 +748,18 @@ nav .fa {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     opacity: 60%;
+}
+@media(max-width: 576px) {
+    .news {
+        padding-right: 48px;
+        padding-left: 48px;
+    }
+
+    .news .text h1 {
+        font-size: 32px;
+    }
+
+    .news .text p {
+        font-size: 16px;
+    }
 }

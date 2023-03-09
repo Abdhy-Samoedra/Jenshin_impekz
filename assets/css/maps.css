@@ -22,7 +22,7 @@ header{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 15px 200px;
     transition: 0.5s ease;
@@ -48,6 +48,29 @@ header .navigation .navigation-items a:hover {
     text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5);
     transition: .3s;
 }
+/* 
+.btnLogin {
+    border: none;
+    background: #3C834C;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.4rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 135%;
+    transition: .4s;
+    left: 30px;
+}
+
+.btnLogin a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnLogin:hover {
+    box-shadow: 86px 46px 39px rgba(0, 0, 0, 0.03), 48px 26px 33px rgba(0, 0, 0, 0.1), 21px 12px 24px rgba(0, 0, 0, 0.17), 5px 3px 13px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: #52A966;
+} */
 
 section{
     padding: 100px 200px;

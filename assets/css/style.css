@@ -287,18 +287,21 @@ nav .fa {
     }
 }
 
-/* new character */
-.new-characthers {
+
+/* new characthers */
+.newCharacthers {
     width: 100%;
     margin: auto;
-    padding-top: 60px;
+    padding-right: 112px;
+    padding-left: 112px;
+    margin-top: 60px;
 }
 
-.new-characthers .text {
+.newCharacthers .text {
     text-align: center;
 }
 
-.new-characthers .text h1 {
+.newCharacthers .text h1 {
     font-family: 'HYWenHei 85W';
     font-style: normal;
     font-weight: 400;
@@ -307,7 +310,8 @@ nav .fa {
     letter-spacing: 0.04em;
     color: #FFFFFF;
 }
-.new-characthers .text p {
+
+.newCharacthers .text p {
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
@@ -319,58 +323,98 @@ nav .fa {
     padding-top: 16px;
 }
 
-.maincontainer {
+.characther-card {
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    margin-left: 112px;
-    margin-right: 112px;   
-    margin-top: 56px; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 56px;
 }
-.card {
-    width: 280px;
-    height: 445px;
+
+.characther-card .flip-card {
+    margin: 20px;
+    position: relative;
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    perspective: 1000px;
 }
 
-.card:hover {
+.characther-card .flip-card-front {
+    width: 280px;
+    min-height: 445px;
+    height: auto;
+    background-color: #102133;
+    background-image: url(../img/hero1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+}
+
+.characther-card .flip-card-back {
+    width: 280px;
+    min-height: 445px;
+    height: auto;
+    background-color: #102133;
+    background-image: url(../img/herodetail1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+}
+
+.characther-card .flip-card:nth-of-type(2) .flip-card-front {
+    background-image: url(../img/hero2.png);
+}
+
+.characther-card .flip-card:nth-of-type(2) .flip-card-back {
+    background-image: url(../img/herodetail2.png);
+}
+
+.characther-card .flip-card:nth-of-type(3) .flip-card-front {
+    background-image: url(../img/hero3.png);
+}
+
+.characther-card .flip-card:nth-of-type(3) .flip-card-back {
+    background-image: url(../img/herodetail3.png);
+}
+
+.characther-card .flip-card:nth-of-type(4) .flip-card-front {
+    background-image: url(../img/hero4.png);
+}
+
+.characther-card .flip-card:nth-of-type(4) .flip-card-back {
+    background-image: url(../img/herodetail4.png);
+}
+
+.characther-card .flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.characther-card .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
     transform: rotateY(180deg);
 }
 
-.card .front {
-    background: linear-gradient(163.19deg, #365574 -57.18%, #102133 106.95%);
-    border-radius: 20px;
-    position: absolute;
-    backface-visibility: hidden;
+.characther-card .flip-card-back .inner {
     width: 100%;
-    height: 100%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    z-index: 2;
 }
 
-.card .back {
-    background: #102133;
-    border-radius: 20px;
-    position: absolute;
-    width: 100%;
-    backface-visibility: hidden;
-    height: 100%;
-    transform: rotateY(180deg);
-}
-
-.card .back .card-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.card .back .card-body {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding-left: 20px;
-    padding-top: 167px;
-}
-
-.card .back .card-body .title {
+.characther-card .inner h3 {
+    margin-bottom: 8px;
     font-family: 'HYWenHei 85W';
     font-style: normal;
     font-weight: 400;
@@ -378,83 +422,328 @@ nav .fa {
     line-height: 24px;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    text-transform: capitalize;
 }
 
-.card .back .card-body .subtitle {
+.characther-card .inner p {
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
     opacity: 60%;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 28px;
     color: #FFFFFF;
-    padding-top: 24px;
 }
-@media(max-width: 1060px) {
-    
-    .new-characthers .text h1 {
+
+.characther-card .flip-card:hover .flip-card-front {
+    transform: rotateY(-180deg);
+}
+
+.characther-card .flip-card:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+
+@media screen and (max-width: 576px) {
+    .newCharacthers {
+        padding-right: 56px;
+        padding-left: 56px;
+    }
+
+    .newCharacthers .text h1 {
         font-size: 32px;
     }
-    .new-characthers .text p {
+
+    .newCharacthers .text p {
         font-size: 16px;
     }
-    .card {
-        width: 280px;
-        height: 445px;
-        transform-style: preserve-3d;
-        transition: all 0.5s ease;
+}
+
+/* new Weapon */
+.newWeapon {
+    width: 100%;
+    padding-right: 112px;
+    padding-left: 112px;
+    margin-top: 60px;
+}
+
+.newWeapon .text {
+    text-align: center;
+}
+
+.newWeapon .text h1 {
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.newWeapon .text p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #79828C;
+    padding-top: 16px;
+}
+
+.weapon-card {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 56px;
+}
+
+.weapon-card .flip-card {
+    margin: 16px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.weapon-card .flip-card-front {
+    width: 176px;
+    min-height: 378px;
+    height: auto;
+    background-color: #102133;
+    background-image: url(../img/Weapon\ 1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+}
+
+.weapon-card .flip-card-back {
+    width: 176px;
+    min-height: 378px;
+    height: auto;
+    background-image: url(../img/weapondetail1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 20px;
+}
+
+.weapon-card .flip-card:nth-of-type(2) .flip-card-front {
+    background-image: url(../img/Weapon\ 2.png);
+}
+
+.weapon-card .flip-card:nth-of-type(2) .flip-card-back {
+    background-image: url(../img/weapondetail2.png);
+}
+
+.weapon-card .flip-card:nth-of-type(3) .flip-card-front {
+    background-image: url(../img/Weapon\ 3.png);
+}
+
+.weapon-card .flip-card:nth-of-type(3) .flip-card-back {
+    background-image: url(../img/weapondetail3.png);
+}
+
+.weapon-card .flip-card:nth-of-type(4) .flip-card-front {
+    background-image: url(../img/Weapon\ 4.png);
+}
+
+.weapon-card .flip-card:nth-of-type(4) .flip-card-back {
+    background-image: url(../img/weapondetail4.png);
+}
+
+.weapon-card .flip-card:nth-of-type(5) .flip-card-front {
+    background-image: url(../img/Weapon\ 5.png);
+}
+
+.weapon-card .flip-card:nth-of-type(5) .flip-card-back {
+    background-image: url(../img/weapondetail5.png);
+}
+
+.weapon-card .flip-card:nth-of-type(6) .flip-card-front {
+    background-image: url(../img/Weapon\ 6.png);
+}
+
+.weapon-card .flip-card:nth-of-type(6) .flip-card-back {
+    background-image: url(../img/weapondetail6.png);
+}
+
+.weapon-card .flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.weapon-card .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+.weapon-card .flip-card-back .inner {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    z-index: 2;
+}
+
+.weapon-card .inner h3 {
+    margin-bottom: 8px;
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.weapon-card .inner p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.weapon-card .inner span {
+    color: #52A966;
+    text-shadow: 0px 0px 84px #52A966, 0px 0px 49.1944px rgba(82, 169, 102, 0.759259), 0px 0px 26.7556px rgba(82, 169, 102, 0.607407), 0px 0px 13.65px rgba(82, 169, 102, 0.5), 0px 0px 6.84444px rgba(82, 169, 102, 0.392593), 0px 0px 3.30556px rgba(82, 169, 102, 0.240741);
+}
+
+.weapon-card .flip-card:hover .flip-card-front {
+    transform: rotateY(-180deg);
+}
+
+.weapon-card .flip-card:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+
+@media screen and (max-width: 576px) {
+    .newWeapon {
+        padding-right: 56px;
+        padding-left: 56px;
     }
-    .card .front {
-        background: linear-gradient(163.19deg, #365574 -57.18%, #102133 106.95%);
-        border-radius: 20px;
-        position: absolute;
-        backface-visibility: hidden;
-        width: 100%;
-        height: 100%;
+
+    .newWeapon .text h1 {
+        font-size: 32px;
     }
-    
-    .card .back {
-        background: #102133;
-        border-radius: 20px;
-        position: absolute;
-        width: 100%;
-        backface-visibility: hidden;
-        height: 100%;
-        transform: rotateY(180deg);
-    }
-    
-    .card .back .card-img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .card .back .card-body {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        padding-left: 20px;
-        padding-top: 167px;
-    }
-    
-    .card .back .card-body .title {
-        font-family: 'HYWenHei 85W';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 0.04em;
-        color: #FFFFFF;
-    }
-    
-    .card .back .card-body .subtitle {
-        font-family: 'Space Grotesk';
-        font-style: normal;
-        font-weight: 400;
-        opacity: 60%;
+
+    .newWeapon .text p {
         font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-        padding-top: 24px;
     }
+}
+
+
+/* news */
+.news {
+    width: 100%;
+    margin: auto;
+    padding-right: 112px;
+    padding-left: 112px;
+    margin-top: 60px;
+}
+
+.news .text {
+    text-align: center;
+}
+
+.news .text h1 {
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.news .text p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #79828C;
+    padding-top: 16px;
+}
+
+.news-card {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 56px;
+}
+
+.news-card .content-card {
+    margin: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.news-card .text-card {
+    width: 280px;
+    min-height: 320px;
+    height: auto;
+    background-color: #102133;
+    background-image: url(../img/news1.png);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    border-radius: 20px;
+}
+.news-card .content-card:nth-of-type(2) .text-card {
+    background-image: url(../img/news2.png);
+}
+.news-card .text-card .inner {
+    border-radius: 0px 0px 20px 20px;
+    background: #102133;
+    opacity: 0.8;
+}
+
+.news-card .text-card .inner {
+    width: 100%;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.news-card .inner h3 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.news-card .inner p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    opacity: 60%;
 }

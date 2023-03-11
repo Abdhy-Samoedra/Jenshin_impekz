@@ -35,7 +35,7 @@ const validateInputs = () => {
     const passwordValue = password.value.trim();
 
     if(usernameValue === ''){
-        setError(username , 'Username is required');
+        setError(username , 'Username is Required');
     }else{
         setSucces(username);
     }

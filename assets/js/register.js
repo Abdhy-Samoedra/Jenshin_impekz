@@ -40,7 +40,7 @@ const validateInputs = () => {
     const ageValue = age.value.trim();
 
     if(usernameValue === ''){
-        setError(username , 'Username is required');
+        setError(username , 'Username is Required');
     }else{
         setSucces(username);
     }

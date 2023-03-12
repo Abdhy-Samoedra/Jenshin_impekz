@@ -2,6 +2,7 @@
     font-family: 'Space Grotesk', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 }
+
 @font-face {
     font-family: 'HYWenHei 85W';
     font-style: normal;
@@ -9,52 +10,59 @@
     src: local('HYWenHei 85W'), url('./assets/font/zhcn.woff') format('woff');
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
 .headerAbout {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.6) ,rgba(255, 255, 255, 0)),url(../img/headerAbout.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url(../img/headerAbout.jpg);
     background-size: cover;
     background-position: center;
-    font-family: 'Space Grotesk';
     background-repeat: no-repeat;
 }
 
-body {
-    background:linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
-    background-attachment: fixed;
-}
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 32px;
+    margin-left: 88px;
+    margin-right: 88px;
 }
 
-nav ul li {
+.nav-links {
+    text-align: center;
+}
+
+.nav-links ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 1rem 1.5rem;
+    padding: 16px 24px;
+    position: relative;
 }
 
-nav ul li a {
+.nav-links ul li a {
     color: #A3ABB3;
     text-decoration: none;
+    font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 18px;
+    line-height: 26px;
 }
 
-nav ul li a:hover {
+.nav-links ul li a:hover {
     color: white;
     text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5);
     transition: .3s;
@@ -63,13 +71,19 @@ nav ul li a:hover {
 .btnLogin {
     border: none;
     background: #3C834C;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.4rem;
+    padding: 8px 24px;
+    border-radius: 6px;
     color: white;
+    font-family: 'Space Grotesk';
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 18px;
     line-height: 135%;
     transition: .4s;
+}
+
+.btnLogin a {
+    text-decoration: none;
+    color: white;
 }
 
 .btnLogin:hover {
@@ -77,7 +91,6 @@ nav ul li a:hover {
     cursor: pointer;
     background: #52A966;
 }
-
 
 .nav-links .resp1 {
     display: none;
@@ -87,12 +100,41 @@ nav .fa {
     display: none;
 }
 
-@media(max-width:1060px) {
-    nav {
-        margin-left: 96px;
-        margin-right: 96px;
-    }
+.headerAbout .text-header {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
+.headerAbout .text-header h1 {
+    font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 68px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 27.1303px 66.6929px 234px rgba(255, 255, 255, 0.53), 17.5844px 43.2269px 137.042px rgba(255, 255, 255, 0.402407), 10.4502px 25.6891px 74.5333px rgba(255, 255, 255, 0.321926), 5.42605px 13.3386px 38.025px rgba(255, 255, 255, 0.265), 2.21061px 5.43424px 19.0667px rgba(255, 255, 255, 0.208074), 0.502412px 1.23505px 9.20833px rgba(255, 255, 255, 0.127593);
+}
+
+.headerAbout .text-header p {
+    padding-top: 24px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+@media(max-width:1060px) {
     .nav-links ul li {
         padding: 8px 10px;
     }
@@ -105,12 +147,20 @@ nav .fa {
         padding: 8px 16px;
         font-size: 16px;
     }
+
+    .headerAbout .text-header h1 {
+        font-size: 48px;
+    }
+
+    .headerAbout .text-header p {
+        font-size: 18px;
+    }
 }
 
 @media(max-width: 768px) {
     nav {
-        margin-left: 72px;
-        margin-right: 72px;
+        margin-left: 64px;
+        margin-right: 64px;
     }
 
     .nav-links ul li {
@@ -155,13 +205,21 @@ nav .fa {
 
     nav .btnLogin {
         margin-left: 8px;
+    }
+
+    .headerAbout .text-header h1 {
+        font-size: 40px;
+    }
+
+    .headerAbout .text-header p {
+        font-size: 16px;
     }
 }
 
 @media(max-width: 576px) {
     nav {
-        margin-left: 56px;
-        margin-right: 56px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .nav-links ul li {
@@ -208,96 +266,41 @@ nav .fa {
         margin-left: 8px;
     }
 
+    .headerAbout .text-header h1 {
+        font-size: 36px;
+    }
+
+    .headerAbout .text-header p {
+        font-size: 14px;
+    }
 }
 
-.heroLogo {
-    position: absolute;
-    left: 50%;
-    top: 250px;
-    transform: translate(-50%);
-    filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.8));
+
+
+/* fitur */
+.game-feature {
+    width: 100%;
+    margin: auto;
+    padding-right: 96px;
+    padding-left: 96px;
+    margin-top: 60px;
 }
 
-
-.poster .btnDonwload :hover{
-    transition: .3s;
-    transform: scale(1.1);
-    cursor: pointer;
-    filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.2));
+.game-feature .text {
+    text-align: center;
 }
 
-.header-text {
-    position: absolute;
-    width: 526px;
-    height: 136px;
-    left: 457px;
-    top: 312px;
-        
+.game-feature .text h1 {
     font-family: 'HYWenHei 85W';
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
-    line-height: 68px;
-    text-align: center;
-        
-    color: #FFFFFF;
-        
-    text-shadow: 0px 0px 232px rgba(255, 255, 255, 0.35),
-    0px 0px 135.87px rgba(255, 255, 255, 0.265741),
-    0px 0px 73.8963px rgba(255, 255, 255, 0.212593),
-    0px 0px 37.7px rgba(255, 255, 255, 0.175), 
-    0px 0px 18.9037px rgba(255, 255, 255, 0.137407),
-    0px 0px 9.12963px rgba(255, 255, 255, 0.0842593);
-}
-
-.header-desc{
-position: absolute;
-width: 912px;
-height: 62px;
-left: 264px;
-top: 480px;
-
-font-family: 'Space Grotesk';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 31px;
-text-align: center;
-letter-spacing: 0.04em;
-
-color: #FFFFFF;
-
-text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
-0px 33.0556px 66.1782px rgba(255, 255, 255, 0.311296),
-0px 19.6444px 35.9926px rgba(255, 255, 255, 0.249037),
-0px 10.2px 18.3625px rgba(255, 255, 255, 0.205),
-0px 4.15556px 9.20741px rgba(255, 255, 255, 0.160963),
-0px 0.944444px 4.44676px rgba(255, 255, 255, 0.0987037);
-}
-
-.fiturGameTitle {
-    position: absolute;
-    height: 49px;
-    left: 521px;
-    top: 820px;
-    font-family: 'HYWenHei 85W';
-    font-weight: 400;
     font-size: 40px;
     line-height: 49px;
-    left: 50%;
-    transform: translateX(-50%);
-
     letter-spacing: 0.04em;
-
     color: #FFFFFF;
 }
 
-.description-fitur{
-    position: absolute;
-    width: 684px;
-    height: 46px;
-    left: 378px;
-    top: 870px;    
+.game-feature .text p {
     font-family: 'Space Grotesk';
     font-style: normal;
     font-weight: 400;
@@ -306,36 +309,80 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
     text-align: center;
     letter-spacing: 0.04em;
     color: #79828C;
+    padding-top: 16px;
+}
+
+.feature-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 1060px) {
+    .game-feature {
+        padding-right: 88px;
+        padding-left: 88px;
+    }
+
+    .game-feature .text h1 {
+        font-size: 36px;
+    }
+
+    .game-feature .text p {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 768px) {
+    .game-feature {
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+    .game-feature .text h1 {
+        font-size: 32px;
+    }
+
+    .game-feature .text p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 576px) {
+    .game-feature {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .game-feature .text h1 {
+        font-size: 28px;
+    }
+
+    .game-feature .text p {
+        font-size: 14px;
+    }
 }
 
 /* Fitur Game 01 */
-.fitur-01{
-    top: 100px;
-    background-color: transparent;
-    position: relative;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 80px 100px;
-    color: black;
+.fitur-01 {
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
 
-.content{
+.content {
     position: relative;
-    width: 1150px;
     display: flex;
     justify-content: center;
-    align-items: center; 
- } 
+    align-items: center;
+}
 
-.content .image{
+.content .image {
     position: relative;
     width: 800px;
     height: 400px;
     overflow: hidden;
 }
 
-.content .image img{
+.content .image img {
     z-index: 111;
     position: absolute;
     top: 0;
@@ -343,66 +390,124 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-.content .text-box{
+.content .text-box {
     z-index: 222;
     background: #67717D;
     border: 32px solid #102133;
     border-radius: 20px;
-    padding: 50px;
+    padding: 24px;
     max-width: 400px;
-    transform: translate(-80px , 50px);
+    transform: translateY(50px);
     position: absolute;
-    width: 402vw;
     height: 316px;
-    right: -100px;
+    right: -80px;
     top: 90px;
-    padding-top: 24px;
+    padding-top: 16px;
 }
-.content .text-box h3{
-    font-size: 25;
+
+.content .text-box h3 {
+    font-size: 20px;
     margin-bottom: 10px;
     font-family: 'HYWenHei 85W';
     background: #67717D;
     border-radius: 20px;
 
 }
-.content .text-box p{
-    font-family: 'Space Grotesk';
 
+.content .text-box p {
+    font-family: 'Space Grotesk';
+    font-size: 16px;
+
+}
+
+@media(max-width: 1060px) {
+    .content .image {
+        width: 600px;
+    }
+
+    .content .text-box {
+        max-width: 300px;
+        right: -60px;
+    }
+
+    .content .text-box h3 {
+        font-size: 18px;
+
+    }
+
+    .content .text-box p {
+        font-size: 14px;
+
+    }
+}
+
+@media(max-width: 768px) {
+    .content .image {
+        width: 400px;
+    }
+
+    .content .text-box {
+        max-width: 270px;
+        right: -30px;
+    }
+
+    .content .text-box h3 {
+        font-size: 16px;
+
+    }
+
+    .content .text-box p {
+        font-size: 12px;
+
+    }
+}
+
+@media(max-width: 576px) {
+    .content .image {
+        width: 300px;
+    }
+
+    .content .text-box {
+        max-width: 270px;
+        right: -10px;
+    }
+
+    .content .text-box h3 {
+        font-size: 14px;
+
+    }
+
+    .content .text-box p {
+        font-size: 12px;
+
+    }
 }
 
 /* Fitur Game 02 */
 
-.fitur-02{
-    top: 80px;
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 80px 100px;
-    color: black;
+.fitur-02 {
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
 
-.content2{
+.content2 {
     position: relative;
-    width: 1150px;
     display: flex;
     justify-content: center;
-    align-items: center; 
- } 
+    align-items: center;
+}
 
-.content2 .image2{
+.content2 .image2 {
     position: relative;
     width: 800px;
     height: 400px;
     overflow: hidden;
 }
 
-.content2 .image2 img{
+.content2 .image2 img {
     z-index: 111;
     position: absolute;
     top: 0;
@@ -410,26 +515,27 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-.content2 .text-box2{
+.content2 .text-box2 {
     z-index: 222;
     background: #67717D;
-    border: 32px solid #102133 ;
+    border: 32px solid #102133;
     border-radius: 20px;
-    padding: 50px;
+    padding: 24px;
     max-width: 400px;
-    transform: translate(-80px , 50px);
+    transform: translateY(50px);
     position: absolute;
     width: 402vw;
     height: 316px;
-    left: 100px;
+    left: -80px;
     top: 90px;
-    padding-top: 24px;
+    padding-top: 16px;
 }
-.content2  .text-box2 h3{
-    font-size: 25;
+
+.content2 .text-box2 h3 {
+    font-size: 20px;
     margin-bottom: 10px;
     font-family: 'HYWenHei 85W';
     background: #67717D;
@@ -437,39 +543,96 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
 
 }
 
-.content2 .text-box2 p{
+.content2 .text-box2 p {
     font-family: 'Space Grotesk';
+    font-size: 16px;
+}
+
+@media(max-width: 1060px) {
+    .content2 .image2 {
+        width: 600px;
+    }
+
+    .content2 .text-box2 {
+        max-width: 300px;
+        left: -60px;
+    }
+
+    .content2 .text-box2 h3 {
+        font-size: 18px;
+
+    }
+
+    .content2 .text-box2 p {
+        font-size: 14px;
+
+    }
+}
+
+@media(max-width: 768px) {
+    .content2 .image2 {
+        width: 400px;
+    }
+
+    .content2 .text-box2 {
+        max-width: 270px;
+        left: -30px;
+    }
+
+    .content2 .text-box2 h3 {
+        font-size: 16px;
+
+    }
+
+    .content2 .text-box2 p {
+        font-size: 12px;
+
+    }
+}
+
+@media(max-width: 576px) {
+    .content2 .image2 {
+        width: 300px;
+    }
+
+    .content2 .text-box2 {
+        max-width: 270px;
+        left: -10px;
+    }
+
+    .content2 .text-box2 h3 {
+        font-size: 14px;
+
+    }
+
+    .content2 .text-box2 p {
+        font-size: 12px;
+
+    }
 }
 
 /* Fitur Game 03 */
 
-.fitur-03{
-    top: 80px;
-    background-color: transparent;  
-    position: relative;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 80px 100px;
-    color: black;
+.fitur-03 {
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
 
-.content3{
+.content3 {
     position: relative;
-    width: 1150px;
     display: flex;
     justify-content: center;
-    align-items: center; 
- } 
+    align-items: center;
+}
 
-.content3 .image3{
+.content3 .image3 {
     position: relative;
     width: 800px;
     height: 400px;
     overflow: hidden;
 }
 
-.content3 .image3 img{
+.content3 .image3 img {
     z-index: 111;
     position: absolute;
     top: 0;
@@ -477,33 +640,114 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
-.content3 .text-box3{
+.content3 .text-box3 {
     z-index: 222;
     background: #67717D;
-    border: 32px solid #102133 ;
+    border: 32px solid #102133;
     border-radius: 20px;
-    padding: 50px;
+    padding: 24px;
     max-width: 400px;
-    transform: translate(-80px , 50px);
+    transform: translateY(50px);
     position: absolute;
     width: 402vw;
     height: 316px;
-    right: -100px;
+    right: -80px;
     top: 90px;
-    padding-top: 24px;
+    padding-top: 16px;
 }
-.content3  .text-box3 h3{
-    font-size: 25;
+
+.content3 .text-box3 h3 {
+    font-size: 20px;
     margin-bottom: 10px;
     font-family: 'HYWenHei 85W';
 }
 
-.content3 .text-box3 p{
+.content3 .text-box3 p {
     font-family: 'Space Grotesk';
+    font-size: 16px;
 }
+
+@media(max-width: 1060px) {
+    .content3 .image3 {
+        width: 600px;
+    }
+
+    .content3 .text-box3 {
+        max-width: 300px;
+        right: -60px;
+    }
+
+    .content3 .text-box3 h3 {
+        font-size: 18px;
+
+    }
+
+    .content3 .text-box3 p {
+        font-size: 14px;
+
+    }
+}
+
+@media(max-width: 768px) {
+    .content3 .image3 {
+        width: 400px;
+    }
+
+    .content3 .text-box3 {
+        max-width: 270px;
+        right: -30px;
+    }
+
+    .content3 .text-box3 h3 {
+        font-size: 16px;
+
+    }
+
+    .content3 .text-box3 p {
+        font-size: 12px;
+
+    }
+}
+
+@media(max-width: 576px) {
+    .content3 .image3 {
+        width: 300px;
+    }
+
+    .content3 .text-box3 {
+        max-width: 270px;
+        right: -10px;
+    }
+
+    .content3 .text-box3 h3 {
+        font-size: 14px;
+
+    }
+
+    .content3 .text-box3 p {
+        font-size: 12px;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* button */
 
@@ -547,6 +791,79 @@ text-shadow: 0px 51px 113px rgba(255, 255, 255, 0.41),
 
 }
 
+/* footer */
+footer {
+    margin-top: 120px;
+}
 
+.footer-sec {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #0D1F2F;
+    padding-right: 88px;
+    padding-left: 88px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+}
 
+.footer-sec li {
+    text-decoration: none;
+    list-style: none;
+}
 
+.footer-sec ul {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-sec ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer-sec .footer-links ul li {
+    padding: 16px;
+}
+
+.footer-sec .footer-links li {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+.footer-sec .footer-platform ul li {
+    padding: 24px;
+}
+
+.footer-sec .footer-platform .fa {
+    font-size: 24px;
+    color: #FFFFFF;
+    opacity: 80%;
+}
+
+.footer-sec p {
+    padding: 32px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 60%;
+}
+@media screen and (max-width: 576px) {
+    .footer-sec img{
+        width: 140px;
+    }
+}

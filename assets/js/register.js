@@ -3,7 +3,10 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const age = document.getElementById('age');
+const logCek = document.getElementById('logCek');
 let check = 0;
+let popup = document.getElementById("popup");
+
 
 
 form.addEventListener('submit' , e =>{
@@ -38,6 +41,7 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const ageValue = age.value.trim();
+    const logCheckValue = logCek.checked;
 
     if(usernameValue === ''){
         setError(username , 'Username is Required');
@@ -70,9 +74,14 @@ const validateInputs = () => {
         setSucces(age);
     }
 
-    if(check == 0){
-        alert("Registrasion Success")
+    if(!logCheckValue){
+        setError(logCek,"You must agree to the terms and conditions");
+    }else{
+        // setSucces(logCek);
     }
 
+    if(check == 0){
+            popup.classList.add("open-popup");
+    }
 
 }

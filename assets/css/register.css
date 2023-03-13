@@ -234,7 +234,6 @@ nav ul li a:hover {
     font-family: 'Space Grotesk';
 }
 
-<<<<<<< Updated upstream
 /* footer */
 footer {
     margin-top: 120px;
@@ -311,7 +310,7 @@ footer {
     .footer-sec img{
         width: 140px;
     }
-=======
+}
 .popup{
     width: 400px;
     height: 510px;
@@ -366,6 +365,4 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
->>>>>>> Stashed changes
 }

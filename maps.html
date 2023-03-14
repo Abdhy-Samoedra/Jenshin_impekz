@@ -16,67 +16,74 @@
 
 <body>
 
-    <header>
-        <a href="home.html"><img class="logo" src="./assets/img/navLogo.svg"></a>
+    <header class="header">
         <div class="menu-btn"></div>
-        <div class="navigation">
-            <div class="navigation-items">
-                <a href="home.html">Home</a>
-                <a href="characthers.html">Characters</a>
-                <a href="maps.html">Maps</a>
-                <a href="about.html">About</a>
+        <nav>
+            <a href="home.html"><img class="logo" src="./assets/img/navLogo.svg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="characthers.html">Characters</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="resp1"><a href="login.html">Login</a></li>
+                    <button class="btnLogin resp1" type="button"><a href="register.html">Signup</a></button>
+                </ul>   
             </div>
-        </div>
-        <div class="navigation">
-            <div class="navigation-items">
-                <a href="login.html">Login</a>
-                <button class="btnRegis" type="button"><a href="register.html">Sign Up</a></button>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div class="nav-links" id="resp">
+                <ul>
+                    <li><a href="login.html" class="resp2">login</a></li>
+                    <button class="btnLogin resp2" type="button"><a href="register.html">Signup</a></button>
+                </ul>
+            </div>
+        </nav>
+        <div class="map">
+            <div class="linear-grad"></div>
+            <img class="maps active" src="./assets/img/mondstadt.png" alt="">
+            <img class="maps" src="./assets/img/inazuma.png" alt="">
+            <img class="maps" src="./assets/img/liyue.png" alt="">
+            <img class="maps" src="./assets/img/sumeru.png" alt="">
+    
+            <div class="content active">
+                <h1>Mondstadt</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
+                    modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
+                    facere doloribus.</p>
+                <a href="characthers.html">See Characters</a>
+            </div>
+            <div class="content">
+                <h1>Inazuma</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
+                    modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
+                    facere doloribus.</p>
+                <a href="characthers.html">See Characters</a>
+            </div>
+            <div class="content">
+                <h1>Liyue</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
+                    modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
+                    facere doloribus.</p>
+                <a href="characthers.html">See Characters</a>
+            </div>
+            <div class="content">
+                <h1>Sumeru</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
+                    modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
+                    facere doloribus.</p>
+                <a href="characthers.html">See Characters</a>
+            </div>
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
             </div>
         </div>
     </header>
 
-    <section class="map">
-        <div class="linear-grad"></div>
-        <img class="maps active" src="./assets/img/mondstadt.png" alt="">
-        <img class="maps" src="./assets/img/inazuma.png" alt="">
-        <img class="maps" src="./assets/img/liyue.png" alt="">
-        <img class="maps" src="./assets/img/sumeru.png" alt="">
-
-        <div class="content active">
-            <h1>Mondstadt</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
-                modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
-                facere doloribus.</p>
-            <a href="characthers.html">See Characters</a>
-        </div>
-        <div class="content">
-            <h1>Inazuma</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
-                modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
-                facere doloribus.</p>
-            <a href="characthers.html">See Characters</a>
-        </div>
-        <div class="content">
-            <h1>Liyue</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
-                modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
-                facere doloribus.</p>
-            <a href="characthers.html">See Characters</a>
-        </div>
-        <div class="content">
-            <h1>Sumeru</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nostrum magni reprehenderit amet, debitis
-                modi inventore omnis accusamus dolor quia, fugit facere! Totam vel repellendus non cumque laudantium
-                facere doloribus.</p>
-            <a href="characthers.html">See Characters</a>
-        </div>
-        <div class="slider-navigation">
-            <div class="nav-btn active"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-        </div>
-    </section>
+    
     <footer class="footer-sec">
         <img src="./assets/img/ftrLogo.svg" alt="">
         <div class="footer-links">
@@ -99,6 +106,7 @@
         <p>Copyright © 2020 samAryok All Rights Reserved</p>
     </footer>
     <script src="./assets/js/mapslider.js"></script>
+    <script src="./assets/js/navbar.js"></script>
 </body>
 
 </html>

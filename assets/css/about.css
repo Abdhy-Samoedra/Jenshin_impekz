@@ -16,10 +16,14 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background: linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
     background-attachment: fixed;
-    overflow-x: hidden;
 }
 
 .headerAbout {
@@ -29,6 +33,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 
@@ -39,6 +44,7 @@ nav {
     padding-top: 32px;
     margin-left: 88px;
     margin-right: 88px;
+    overflow: hidden;
 }
 
 .nav-links {
@@ -92,11 +98,10 @@ nav {
     background: #52A966;
 }
 
-.nav-links .resp1 {
+nav .fa {
     display: none;
 }
-
-nav .fa {
+.nav-links .resp1 {
     display: none;
 }
 
@@ -135,6 +140,12 @@ nav .fa {
 }
 
 @media(max-width:1060px) {
+    nav {
+        margin-left: 88px;
+        margin-right: 88px;
+        overflow: hidden;
+    }
+
     .nav-links ul li {
         padding: 8px 10px;
     }
@@ -161,6 +172,7 @@ nav .fa {
     nav {
         margin-left: 64px;
         margin-right: 64px;
+        overflow: hidden;
     }
 
     .nav-links ul li {
@@ -220,6 +232,7 @@ nav .fa {
     nav {
         margin-left: 40px;
         margin-right: 40px;
+        overflow: hidden;
     }
 
     .nav-links ul li {
@@ -248,6 +261,7 @@ nav .fa {
         text-align: left;
         z-index: 2;
         transition: 1s;
+        overflow: hidden;
     }
 
     nav .fa {
@@ -339,6 +353,7 @@ nav .fa {
         padding-right: 64px;
         padding-left: 64px;
     }
+
     .game-feature .text h1 {
         font-size: 32px;
     }
@@ -353,6 +368,7 @@ nav .fa {
         padding-right: 40px;
         padding-left: 40px;
     }
+
     .game-feature .text h1 {
         font-size: 28px;
     }
@@ -821,6 +837,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
 }
+
 .footer-sec ul li a {
     text-decoration: none;
     color: #FFFFFF;
@@ -862,8 +879,9 @@ footer {
     text-align: center;
     opacity: 60%;
 }
+
 @media screen and (max-width: 576px) {
-    .footer-sec img{
+    .footer-sec img {
         width: 140px;
     }
 }

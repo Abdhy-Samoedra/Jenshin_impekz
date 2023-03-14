@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <meta charset="UTF-8">
@@ -11,7 +12,39 @@
     <link rel="stylesheet" href="./assets/css/characthers.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img class="logo" src="./assets/img/navLogo.svg"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="characthers.html">Characters</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="resp1"><a href="login.html">Login</a></li>
+                    <button class="btnLogin resp1" type="button"><a href="register.html">Signup</a></button>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div class="nav-links" id="resp">
+                <ul>
+                    <li><a href="login.html" class="resp2">login</a></li>
+                    <button class="btnLogin resp2" type="button"><a href="register.html">Signup</a></button>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-header">
+            <h1>Showing all characthers with <br>
+                different nation & element</h1>
+            <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+ enim velit mollit. Exercitation veniam consequat 
+            </p>
+        </div>
+    </section>
     <footer class="footer-sec">
         <img src="./assets/img/ftrLogo.svg" alt="">
         <div class="footer-links">
@@ -29,9 +62,11 @@
                 <li><a href="https://discord.com/invite/genshinimpact"><i class="fa fa-twitch"></i></a></li>
                 <li><a href="https://twitter.com/GenshinImpact"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://www.reddit.com/r/Genshin_Impact/"><i class="fa fa-reddit"></i></a></li>
-            </ul>   
+            </ul>
         </div>
         <p>Copyright © 2020 samAryok All Rights Reserved</p>
     </footer>
+    <script src="./assets/js/navbar.js"></script>
 </body>
+
 </html>

@@ -13,7 +13,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 html,
@@ -96,6 +96,9 @@ nav {
     cursor: pointer;
     background: #52A966;
 }
+nav .fa {
+    display: none;
+}
 
 .CTA {
     top: 50%;
@@ -130,9 +133,6 @@ nav {
     display: none;
 }
 
-nav .fa {
-    display: none;
-}
 
 @media(max-width:1060px) {
     nav {

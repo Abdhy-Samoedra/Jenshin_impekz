@@ -2,6 +2,7 @@
     font-family: 'Space Grotesk', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 }
+
 @font-face {
     font-family: 'HYWenHei 85W';
     font-style: normal;
@@ -9,120 +10,173 @@
     src: local('HYWenHei 85W'), url('./assets/font/zhcn.woff') format('woff');
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
-header{
-    z-index: 999;
-    position: absolute;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(144.15deg, #102133 6.38%, #406285 127.01%, #406285 160.25%);
+    background-attachment: fixed;
+}
+
+.header {
+    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 32px 88px;
-    transition: 0.5s ease;
-    font-family: 'Space Grotesk';
-}
-
-header .navigation {
     position: relative;
+    z-index: 1;
+}
+
+
+nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-header .navigation .navigation-items a{
+    justify-content: space-between;
+    padding-top: 32px;
+    margin-left: 88px;
+    margin-right: 88px;
+    overflow: hidden;
+    z-index: 1000;
     /* position: relative; */
-    color: #A3ABB3;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 16px 24px;
-    transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:hover {
+.nav-links {
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 16px 24px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #A3ABB3;
+    text-decoration: none;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.nav-links ul li a:hover {
     color: white;
     text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5);
     transition: .3s;
 }
-section{
-    padding: 100px 200px;
+
+.btnLogin {
+    border: none;
+    background: #3C834C;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    transition: .4s;
 }
 
-.map{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.btnLogin a {
+    text-decoration: none;
+    color: white;
 }
 
-.map .content{
-    z-index: 888;
-    color: #fff;
-    width: 70%;
-    margin-top: 50px;
+.btnLogin:hover {
+    box-shadow: 86px 46px 39px rgba(0, 0, 0, 0.03), 48px 26px 33px rgba(0, 0, 0, 0.1), 21px 12px 24px rgba(0, 0, 0, 0.17), 5px 3px 13px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: #52A966;
+}
+
+nav .fa {
     display: none;
 }
 
-.map .content.active{
+.nav-links .resp1 {
+    display: none;
+}
+
+.map {
+    padding-top: 120px;
+    padding-left: 88px;
+    padding-right: 88px;
+}
+
+.map .content {
+    color: #fff;
+    width: 70%;
+    display: none;
+}
+
+.map .content.active {
     display: block;
 }
 
 
-.map .content h1{
-    font-size: 4em;
-    font-weight: 900;
-    letter-spacing: 5px;
-    line-height: 75px;
-    margin-bottom: 40px;
+.map .content h1 {
     font-family: 'HYWenHei 85W';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 72px;
+    /* line-height: 88px; */
+    color: #FFFFFF;
+    text-shadow: 27.1303px 66.6929px 234px rgba(255, 255, 255, 0.53), 17.5844px 43.2269px 137.042px rgba(255, 255, 255, 0.402407), 10.4502px 25.6891px 74.5333px rgba(255, 255, 255, 0.321926), 5.42605px 13.3386px 38.025px rgba(255, 255, 255, 0.265), 2.21061px 5.43424px 19.0667px rgba(255, 255, 255, 0.208074), 0.502412px 1.23505px 9.20833px rgba(255, 255, 255, 0.127593);
 }
 
-.map .content p{
-    margin-bottom: 65px;
+.map .content p {
     font-family: 'Space Grotesk';
-    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
-.map .content a{
+.map .content a {
     background: #F4EFE1;
     border: 8px solid #E4D9C9;
     padding: 8px 24px;
     color: black;
-    font-size: 1.1em;
+    font-size: 20px;
     font-weight: 500;
     text-decoration: none;
     border-radius: 2px;
     font-family: 'HYWenHei 85W';
 }
 
-.map img{
+.map img {
     z-index: 000;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;    
+    object-fit: cover;
 }
 
-.slider-navigation{
+.slider-navigation {
     z-index: 888;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(80px);
-    margin-bottom: 12px;
+    /* transform: translateY(80%); */
+    padding-top: 120px;
 }
 
-.slider-navigation .nav-btn{
+.slider-navigation .nav-btn {
     width: 12px;
     height: 12px;
     background: #bdb8b8;
@@ -132,97 +186,221 @@ section{
     transition: 0.3s ease;
 }
 
-.slider-navigation .nav-btn.active{
-    background: #fff;
+.slider-navigation .nav-btn.active {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px #FFFFFF;
 }
 
-.slider-navigation .nav-btn:not(:last-child){
+.slider-navigation .nav-btn:not(:last-child) {
     margin-right: 20px;
 }
 
-.slider-navigation .nav-btn:hover{
+.slider-navigation .nav-btn:hover {
     transform: scale(1.2);
 }
 
-.maps{
+.maps {
     position: absolute;
     width: 100%;
     clip-path: circle(0% at 0 50%);
 }
 
-.maps.active{
+.maps.active {
     clip-path: circle(150.0% at 0 50%);
     transform: 2s ease;
-    transition-property: clip-path ;
+    transition-property: clip-path;
+    z-index: -1;
 }
 
-@media (max-width: 1040px){
-    header{
-        padding: 12px 20px;
+@media(max-width:1060px) {
+    nav {
+        margin-left: 88px;
+        margin-right: 88px;
+        overflow: hidden;
     }
 
-    section{
-        padding: 100px 20px;
+    .nav-links ul li {
+        padding: 8px 10px;
     }
-    header .navigation{
+
+    .nav-links ul li a {
+        font-size: 16px;
+    }
+
+    .btnLogin {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .map {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 768px) {
+    nav {
+        margin-left: 64px;
+        margin-right: 64px;
+        overflow: hidden;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links .resp1 {
+        display: block;
+    }
+
+    .nav-links .resp2 {
         display: none;
     }
 
-    header .navigation.active{
-        position: fixed;
-        width: 100%;
+    #resp {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: #102133;
         height: 100vh;
+        width: 200px;
         top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(1, 1, 1, 0.5);
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
     }
 
-    header .navigation .navigation-items a{
-        color: #fff;
-        font-size: 1.2em;
-        margin: 20px;
-    }
-
-
-    header .navigation.active .navigation-items{
-        background:  #102133;
-        width: 600px;
-        max-width: 600px;
-        margin: 20px;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 5px;
-        box-shadow: 0px 5px 25px rgb(1, 1, 1 / 20%);
-    }
-
-
-
-    .menu-btn{
-        background: url(../img/menu.png)no-repeat;
-        background-size: 30px;
-        background-position: center;
-        width: 40px;
-        height: 40px;
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 16px;
+        font-size: 28px;
         cursor: pointer;
-        transition: 0.3s ease;
     }
 
-    .menu-btn.active{
-        z-index: 999;
-        background: url(../img/close.png)no-repeat;
-        background-size: 25px;
-        background-position: center;
-        transition: 0.3s ease;
+    .nav-links ul {
+        padding: 32px;
+    }
+
+    nav .btnLogin {
+        margin-left: 8px;
+    }
+
+    .map .content h1 {
+        font-size: 64px;
+    }
+
+    .map .content p {
+        font-size: 16px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .map .content a {
+        font-size: 16px;
+    }
+
+    .map {
+        padding-top: 80px;
+        padding-left: 64px;
+        padding-right: 64px;
     }
 
 
 }
 
+@media(max-width: 576px) {
+    nav {
+        margin-left: 40px;
+        margin-right: 40px;
+        overflow: hidden;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links .resp1 {
+        display: block;
+    }
+
+    .nav-links .resp2 {
+        display: none;
+    }
+
+    #resp {
+        display: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        background-color: #102133;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 16px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 32px;
+    }
+
+    nav .btnLogin {
+        margin-left: 8px;
+    }
+    
+    .map .content h1 {
+        font-size: 40px;
+    }
+
+    .map .content p {
+        font-size: 14px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .map .content a {
+        font-size: 14px;
+    }
+
+    .map {
+        padding-top: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* .menu-btn{
+    background: url(../img/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-btn.active{
+    z-index: 999;
+    background: url(../img/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+} */
 
 
 
@@ -253,6 +431,7 @@ section{
     align-items: center;
     flex-wrap: wrap;
 }
+
 .footer-sec ul li a {
     text-decoration: none;
     color: #FFFFFF;
@@ -294,8 +473,9 @@ section{
     text-align: center;
     opacity: 60%;
 }
+
 @media screen and (max-width: 576px) {
-    .footer-sec img{
+    .footer-sec img {
         width: 140px;
     }
 }

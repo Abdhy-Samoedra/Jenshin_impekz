@@ -5,6 +5,7 @@ let check = 0;
 
 
 form.addEventListener('submit' , e =>{
+    check = 0;
     e.preventDefault();
     validateInputs();
 });
@@ -26,7 +27,7 @@ const setSucces = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('succes');
     inputControl.classList.remove('error')
-    check = 0
+    // check = 0
     
 };
 
@@ -47,6 +48,7 @@ const validateInputs = () => {
     }else{
         setSucces(password)
     }
+    console.log(check);
 
     if(check == 0){
         alert("Login Success")

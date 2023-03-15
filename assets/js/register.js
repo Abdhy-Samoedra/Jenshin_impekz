@@ -10,6 +10,7 @@ let popup = document.getElementById("popup");
 
 
 form.addEventListener('submit' , e =>{
+    check = 0;
     e.preventDefault();
 
     validateInputs();
@@ -32,7 +33,7 @@ const setSucces = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('succes');
     inputControl.classList.remove('error')
-    check = 0
+    // check = 0
     
 };
 
@@ -77,10 +78,11 @@ const validateInputs = () => {
     if(!logCheckValue){
         setError(logCek,"You must agree to the terms and conditions");
     }else{
-        // setSucces(logCek);
+        setSucces(logCek);
     }
+    console.log(check);
 
-    if(check == 0){
+    if(check === 0){
             popup.classList.add("open-popup");
     }
 

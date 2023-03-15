@@ -13,7 +13,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 html,
@@ -36,6 +36,70 @@ body {
     position: relative;
 }
 
+<<<<<<< Updated upstream
+=======
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    margin-left: 88px;
+    margin-right: 88px;
+    overflow: hidden;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 16px 24px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #A3ABB3;
+    text-decoration: none;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.nav-links ul li a:hover {
+    color: white;
+    text-shadow: 0px 10px 40px rgba(255, 255, 255, 0.5);
+    transition: .3s;
+}
+
+.btnLogin {
+    border: none;
+    background: #3C834C;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    transition: .4s;
+}
+
+.btnLogin a {
+    text-decoration: none;
+    color: white;
+}
+
+.btnLogin:hover {
+    box-shadow: 86px 46px 39px rgba(0, 0, 0, 0.03), 48px 26px 33px rgba(0, 0, 0, 0.1), 21px 12px 24px rgba(0, 0, 0, 0.17), 5px 3px 13px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: #52A966;
+}
+
+>>>>>>> Stashed changes
 .CTA {
     top: 50%;
     left: 50%;
@@ -66,6 +130,9 @@ body {
 }
 
 
+nav .fa {
+    display: none;
+}
 
 @media(max-width:1060px) {
     .btnLogin {
@@ -571,6 +638,30 @@ body {
 
 .news-card .content-card:nth-of-type(2) .text-card {
     background-image: url(../img/news2.png);
+}
+
+.news-card .content-card:nth-of-type(3) .text-card {
+    background-image: url(../img/hero2.png);
+}
+
+.news-card .content-card:nth-of-type(4) .text-card {
+    background-image: url(../img/news4.jpg);
+}
+
+.news-card .content-card:nth-of-type(5) .text-card {
+    background-image: url(../img/news5.png);
+}
+
+.news-card .content-card:nth-of-type(6) .text-card {
+    background-image: url(../img/news6.jpg);
+}
+
+.news-card .content-card:nth-of-type(7) .text-card {
+    background-image: url(../img/news7.png);
+}
+
+.news-card .content-card:nth-of-type(8) .text-card {
+    background-image: url(../img/news8.jpeg);
 }
 
 .news-card .text-card .inner {

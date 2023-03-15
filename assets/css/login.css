@@ -148,8 +148,6 @@ body{
 .login-register p a:hover{
     text-decoration: underline;
 }
-<<<<<<< Updated upstream
-=======
 
 /* styles for mobile devices */
 @media(max-width: 576px) {
@@ -268,4 +266,3 @@ body{
         width: 140px;
     }
 }
->>>>>>> Stashed changes

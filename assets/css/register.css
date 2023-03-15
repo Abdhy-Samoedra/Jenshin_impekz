@@ -45,7 +45,7 @@ body {
     padding-right: 80px;
 }
 .content {
-    padding-top: 40px;
+    padding-top: 48px;
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;

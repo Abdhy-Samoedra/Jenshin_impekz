@@ -5,7 +5,6 @@ const password = document.getElementById('password');
 const age = document.getElementById('age');
 const logCek = document.getElementById('logCek');
 let check = 0;
-let popup = document.getElementById("popup");
 
 
 
@@ -83,7 +82,7 @@ const validateInputs = () => {
     console.log(check);
 
     if(check === 0){
-            popup.classList.add("open-popup");
+            window.location.href = "home.html";
     }
 
 }

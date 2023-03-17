@@ -167,6 +167,7 @@ body{
       display: flex;
       align-items: center;
       width: 300px;  
+      margin-top: 64px;
    }
    .wrapper .form-box{
         width: 100%;

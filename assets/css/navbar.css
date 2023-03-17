@@ -121,7 +121,7 @@ nav .fa {
         top: 0;
         right: -200px;
         text-align: left;
-        z-index: 2;
+        z-index: 9999;
         transition: 1s;
     }
 

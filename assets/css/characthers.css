@@ -199,7 +199,6 @@ body {
     min-height: 620px;
     height: auto;
     background-color: #102133;
-    background-image: url(../img/char1.png);
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -214,7 +213,6 @@ body {
     min-height: 620px;
     height: auto;
     background-color: #102133;
-    background-image: url(../img/chardetail1.png);
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -223,27 +221,101 @@ body {
     transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
     border-radius: 20px;
 }
-.content-char .characther-card .flip-card:nth-of-type(2) .flip-card-front {
-    background-image: url(../img/char2.png);
+#char1-front{
+    background-image: url("../img/char1.png");
+}
+#char1-back{
+    background-image: url("../img/chardetail1.png");
+}
+#char2-front{
+    background-image: url("../img/char2.png");
+}
+#char2-back{
+    background-image: url("../img/chardetail2.png");
+}
+#char3-front{
+    background-image: url("../img/char3.png");
+}
+#char3-back{
+    background-image: url("../img/chardetail3.png");
+}
+#char4-front{
+    background-image: url("../img/char4.png");
+}
+#char4-back{
+    background-image: url("../img/chardetail4.png");
+}
+#char5-front{
+    background-image: url("../img/char5.png");
+}
+#char5-back{
+    background-image: url("../img/chardetail5.png");
+}
+#char6-front{
+    background-image: url("../img/char6.png");
+}
+#char6-back{
+    background-image: url("../img/chardetail6.png");
+}
+#char7-front{
+    background-image: url("../img/char7.png");
+}
+#char7-back{
+    background-image: url("../img/chardetail7.png");
+}
+#char8-front{
+    background-image: url("../img/char8.png");
+}
+#char8-back{
+    background-image: url("../img/chardetail8.png");
+}
+#char9-front{
+    background-image: url("../img/char9.png");
+}
+#char9-back{
+    background-image: url("../img/chardetail9.png");
+}
+#char10-front{
+    background-image: url("../img/char10.png");
+}
+#char10-back{
+    background-image: url("../img/chardetail10.png");
+}
+#char11-front{
+    background-image: url("../img/char11.png");
+}
+#char11-back{
+    background-image: url("../img/chardetail11.png");
+}
+#char12-front{
+    background-image: url("../img/char12.png");
+}
+#char12-back{
+    background-image: url("../img/chardetail12.png");
+}#char13-front{
+    background-image: url("../img/char13.png");
+}
+#char13-back{
+    background-image: url("../img/chardetail13.png");
+}
+#char14-front{
+    background-image: url("../img/char14.png");
+}
+#char14-back{
+    background-image: url("../img/chardetail14.png");
+}#char15-front{
+    background-image: url("../img/char15.png");
+}
+#char15-back{
+    background-image: url("../img/chardetail15.png");
+}
+#char16-front{
+    background-image: url("../img/char16.png");
+}
+#char16-back{
+    background-image: url("../img/chardetail16.png");
 }
 
-.content-char .characther-card .flip-card:nth-of-type(2) .flip-card-back {
-    background-image: url(../img/chardetail2.png);
-}
-.content-char .characther-card .flip-card:nth-of-type(3) .flip-card-front {
-    background-image: url(../img/char3.png);
-}
-
-.content-char .characther-card .flip-card:nth-of-type(3) .flip-card-back {
-    background-image: url(../img/chardetail3.png);
-}
-.content-char .characther-card .flip-card:nth-of-type(4) .flip-card-front {
-    background-image: url(../img/char4.png);
-}
-
-.content-char .characther-card .flip-card:nth-of-type(4) .flip-card-back {
-    background-image: url(../img/chardetail4.png);
-}
 
 .characther-card .flip-card-back {
     position: absolute;

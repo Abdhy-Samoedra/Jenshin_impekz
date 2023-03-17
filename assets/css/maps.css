@@ -95,7 +95,7 @@ body {
 }
 
 .slider-navigation {
-    z-index: 888;
+    z-index: 4;
     position: relative;
     display: flex;
     justify-content: center;
@@ -172,15 +172,15 @@ body {
 }
 
 @media(max-width: 576px) {
-   
+
     .map .content h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .map .content p {
         font-size: 14px;
-        padding-top: 40px;
-        padding-bottom: 60px;
+        padding-top: 24px;
+        padding-bottom: 40px;
     }
 
     .map .content a {
@@ -188,11 +188,25 @@ body {
     }
 
     .map {
-        padding-top: 80px;
+        padding-top: 40px;
         padding-left: 40px;
         padding-right: 40px;
     }
+
+    .slider-navigation {
+        padding-top: 72px;
+    }
+
+    .map .content {
+        width: 90%;
+    }
+
+    .map .content a {
+        border: 6px solid #E4D9C9;
+        padding: 4px 12px;
+        color: #102133;
+        ;
+        font-size: 14px;
+
+    }
 }
-
-
-

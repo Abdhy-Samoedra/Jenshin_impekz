@@ -596,6 +596,30 @@ body {
     background-image: url(../img/news8.jpeg);
 }
 
+.news-card .content-card:nth-of-type(3) .text-card {
+    background-image: url(../img/hero2.png);
+}
+
+.news-card .content-card:nth-of-type(4) .text-card {
+    background-image: url(../img/news4.jpg);
+}
+
+.news-card .content-card:nth-of-type(5) .text-card {
+    background-image: url(../img/news5.png);
+}
+
+.news-card .content-card:nth-of-type(6) .text-card {
+    background-image: url(../img/news6.jpg);
+}
+
+.news-card .content-card:nth-of-type(7) .text-card {
+    background-image: url(../img/news7.png);
+}
+
+.news-card .content-card:nth-of-type(8) .text-card {
+    background-image: url(../img/news8.jpeg);
+}
+
 .news-card .text-card .inner {
     border-radius: 0px 0px 20px 20px;
     background: #102133;

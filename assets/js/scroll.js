@@ -14,4 +14,4 @@ window.addEventListener('scroll' , reveal);
                     reveals[i].classList.remove('active')
                 }
             }
-        }x1
+        }

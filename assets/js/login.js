@@ -51,7 +51,7 @@ const validateInputs = () => {
     console.log(check);
 
     if(check == 0){
-        alert("Login Success")
+        window.location.href = "home.html"
     }
 
 
